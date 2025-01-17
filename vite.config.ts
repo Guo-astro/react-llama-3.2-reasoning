@@ -3,8 +3,8 @@ import react from "@vitejs/plugin-react";
 import { peerDependencies, name } from "./package.json";
 import path from "path";
 import dts from "vite-plugin-dts";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
@@ -13,6 +13,12 @@ export default defineConfig({
       tsconfigPath: "./tsconfig.app.json",
       exclude: ["**/*.stories.ts", "**/*.test.ts"],
     }),
+    viteStaticCopy({
+      targets: [
+        // Copy worker.js from the source directory to the root of the dist folder
+        { src: 'src/worker.js', dest: '.' }
+      ]
+    })
   ],
   optimizeDeps: {
     exclude: ["lucide-react"],
