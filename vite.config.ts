@@ -16,7 +16,7 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         // Copy worker.js from the source directory to the root of the dist folder
-        { src: 'src/worker.js', dest: '.' }
+        { src: 'src/lib/worker.js', dest: '.' }
       ]
     })
   ],
