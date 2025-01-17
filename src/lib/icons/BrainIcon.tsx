@@ -1,7 +1,9 @@
 import { SVGProps } from "react";
 import { JSX } from "react/jsx-runtime";
 
-export default function BotIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+export function BrainIcon(
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
+) {
   return (
     <svg
       {...props}

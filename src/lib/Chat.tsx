@@ -3,9 +3,9 @@ import { marked } from "marked";
 import DOMPurify from "dompurify";
 import { MathJaxContext, MathJax } from "the-react-mathjax";
 import "./Chat.css";
-import BotIcon from "./icons/BotIcon";
-import BrainIcon from "./icons/BrainIcon";
-import UserIcon from "./icons/UserIcon";
+import {BotIcon} from "./icons/BotIcon";
+import {BrainIcon} from "./icons/BrainIcon";
+import { UserIcon } from "./icons/UserIcon";
 
 interface MessageProps {
   role: "assistant" | "user";
@@ -109,7 +109,7 @@ function Message({ role, content, answerIndex }: MessageProps): JSX.Element {
   );
 }
 
-export default function Chat({ messages }: ChatProps): JSX.Element {
+export function Chat({ messages }: ChatProps): JSX.Element {
   const empty = messages.length === 0;
 
   return (

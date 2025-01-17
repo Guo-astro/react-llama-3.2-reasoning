@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef, type RefObject } from "react";
 import { Progress } from "@/lib/Progress";
-import Chat from "./Chat";
-import StopIcon from "./icons/StopIcon";
-import ArrowRightIcon from "./icons/ArrowRightIcon";
+import {Chat} from "./Chat";
+import {StopIcon} from "./icons/StopIcon";
+import {ArrowRightIcon} from "./icons/ArrowRightIcon";
 interface MessageData {
   status?: string;
   data?: string;
